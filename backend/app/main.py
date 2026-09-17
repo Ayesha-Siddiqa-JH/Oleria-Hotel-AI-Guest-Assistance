@@ -83,3 +83,13 @@ async def get_hotel_info():
         "success": True,
         "hotel": hotel_service.get_hotel_data()
     }
+
+# Mount built React frontend so that navigating to http://127.0.0.1:8000/ serves the full UI
+import os
+from fastapi.staticfiles import StaticFiles
+
+frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
+if os.path.exists(frontend_dist):
+    logger.info(f"Serving compiled frontend from: {frontend_dist}")
+    app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
+
