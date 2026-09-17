@@ -1,0 +1,183 @@
+{
+  "hotel_name": "StayAI Grand Hotel Bengaluru",
+  "tagline": "Urban Luxury & Contemporary Elegance in Central Bengaluru",
+  "star_rating": 5,
+  "address": {
+    "street": "142 MG Road, Ashok Nagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "postal_code": "560001",
+    "country": "India",
+    "landmark": "Adjacent to Trinity Metro Station"
+  },
+  "contact": {
+    "phone": "+91 80 4965 2000",
+    "email": "concierge@stayaigrand.com",
+    "website": "https://stayaigrand.com"
+  },
+  "timings": {
+    "check_in": "3:00 PM",
+    "check_out": "11:00 AM",
+    "reception": "24/7 Front Desk Concierge",
+    "early_check_in_policy": "Early check-in from 9:00 AM is subject to availability upon arrival. Guaranteed early check-in before 9:00 AM can be secured for an early arrival fee of INR 1,500.",
+    "late_check_out_policy": "Late check-out up to 3:00 PM is available upon request for INR 1,500, subject to occupancy. Departures past 3:00 PM are billed at the full nightly room rate."
+  },
+  "rooms": [
+    {
+      "room_type_id": "deluxe_room",
+      "name": "Deluxe Room",
+      "capacity": 2,
+      "bed_type": "1 King Bed or 2 Twin Beds",
+      "size_sqm": 38,
+      "view": "City Skyline View",
+      "price_per_night": 5500,
+      "currency": "INR",
+      "description": "Sophisticated urban sanctuary featuring floor-to-ceiling soundproof windows, high-speed Wi-Fi, ergonomic work desk, and an Italian marble bathroom with a walk-in rainfall shower.",
+      "amenities": [
+        "High-Speed 500 Mbps Wi-Fi",
+        "55-inch 4K Smart TV with Streaming Apps",
+        "Nespresso Coffee Machine & Organic Tea Selection",
+        "Stocked Mini Bar",
+        "Italian Marble Bathroom with Rainfall Shower",
+        "Plush Bathrobes & Waffle Slippers",
+        "Laptop-sized Digital Safe"
+      ]
+    },
+    {
+      "room_type_id": "executive_king_suite",
+      "name": "Executive King Suite",
+      "capacity": 3,
+      "bed_type": "1 King Bed + 1 Premium Pull-Out Sofa Bed",
+      "size_sqm": 58,
+      "view": "Garden & Pool View",
+      "price_per_night": 8500,
+      "currency": "INR",
+      "description": "Expansive executive suite featuring a separate living parlor, walk-in dressing wardrobe, deep soaking bathtub, and exclusive access to the 14th Floor Executive Club Lounge.",
+      "amenities": [
+        "Executive Club Lounge Access (Complimentary High Tea & Evening Cocktails)",
+        "Separate Living Room & Powder Room",
+        "Deep Soaking Freestanding Bathtub",
+        "High-Speed 500 Mbps Wi-Fi",
+        "65-inch 4K OLED TV with Bose Soundbar",
+        "Nespresso Machine & Complimentary In-Room Treats",
+        "Complimentary Daily Pressing of 2 Garments"
+      ]
+    },
+    {
+      "room_type_id": "presidential_family_suite",
+      "name": "Presidential Family Suite",
+      "capacity": 4,
+      "bed_type": "2 King Bedrooms (2 King Beds or 1 King + 2 Twin Beds)",
+      "size_sqm": 92,
+      "view": "Panoramic City & Cubbon Park View",
+      "price_per_night": 14000,
+      "currency": "INR",
+      "description": "The pinnacle of luxury for families and small groups, boasting two master bedrooms, two en-suite marble bathrooms, a dining salon for 6, and dedicated 24/7 personal butler service.",
+      "amenities": [
+        "Two Private Master Bedrooms with En-suite Marble Bathrooms",
+        "Spacious Dining & Living Salon with Dining Table for 6",
+        "Dedicated 24/7 Butler Service",
+        "Complimentary Luxury Airport Chauffeur Transfer (One-way)",
+        "Complimentary International Breakfast Buffet for up to 4 guests",
+        "Full Executive Club Lounge Privileges",
+        "Complimentary Baby Cot & Child Amenities upon request"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "name": "The Glasshouse Bistro",
+      "cuisine": "Contemporary Continental, Pan-Asian & Authentic South Indian Fine Dining",
+      "timings": "6:30 AM – 11:00 PM (Daily)",
+      "breakfast_timings": "6:30 AM – 10:30 AM (Daily)",
+      "breakfast_inclusion": "A lavish international breakfast buffet is included complimentary with Executive King Suite and Presidential Family Suite bookings. For Deluxe Room guests on room-only plans, the breakfast buffet is available for INR 850 + taxes per guest.",
+      "highlights": "Live egg & dosa stations, artisanal sourdough bakery, fresh cold-pressed fruit juices, and barista-crafted specialty coffees."
+    },
+    {
+      "name": "Skyline Rooftop Bar & Lounge",
+      "cuisine": "Artisan Cocktails, Tapas & Wood-fired Gourmet Pizzas",
+      "timings": "5:00 PM – 1:00 AM (Daily)",
+      "highlights": "Stunning open-air terrace with panoramic 15th-floor views of Bengaluru city, signature craft cocktails, and sunset lounge music."
+    },
+    {
+      "name": "24/7 In-Room Dining",
+      "cuisine": "Comprehensive round-the-clock comfort dining menu featuring Indian classics, pastas, burgers, and late-night snacks.",
+      "timings": "Available 24 hours daily"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Rooftop Infinity Pool",
+      "details": "Heated open-air rooftop infinity pool located on the 15th floor with breathtaking skyline vistas.",
+      "timings": "6:00 AM – 10:00 PM daily",
+      "cost": "Complimentary for all in-house guests. Pool towels, sun loungers, and poolside refreshments are provided."
+    },
+    {
+      "name": "High-Speed Wi-Fi",
+      "details": "Complimentary ultra-fast fiber optic Wi-Fi (500 Mbps) accessible across all guest rooms, meeting spaces, and public lounges.",
+      "cost": "Complimentary unlimited access for all registered guests."
+    },
+    {
+      "name": "Wellness Gym & Fitness Studio",
+      "details": "Modern 24/7 fitness facility equipped with TechnoGym treadmills, ellipticals, free weights, resistance machines, and a quiet yoga stretch area.",
+      "timings": "Open 24 hours daily with guest room keycard access.",
+      "cost": "Complimentary for all hotel guests."
+    },
+    {
+      "name": "Aura Spa & Sauna",
+      "details": "Holistic wellness center featuring traditional Ayurvedic therapies, deep tissue massages, aromatherapy, steam rooms, and Finnish saunas.",
+      "timings": "8:00 AM – 9:00 PM daily",
+      "cost": "Spa treatments priced per menu. Steam and sauna facilities are complimentary with any booked treatment."
+    },
+    {
+      "name": "Valet Parking & EV Charging",
+      "details": "Secure multi-level underground parking with 24/7 valet service and four Type-2 fast charging stations for electric vehicles.",
+      "cost": "Complimentary valet parking for all resident hotel guests."
+    }
+  ],
+  "policies": {
+    "cancellation": "Free cancellation is permitted up to 24 hours prior to check-in (by 3:00 PM on the day preceding arrival). Cancellations made within 24 hours or failure to arrive (no-show) will incur a charge equal to the first night room rate plus applicable taxes.",
+    "pets": "Service animals are welcomed throughout the property. Well-behaved pets (dogs and cats up to 10 kg) are permitted exclusively in designated Deluxe Garden Patio rooms with prior notice. A one-time deep cleaning fee of INR 2,000 applies per stay.",
+    "smoking": "StayAI Grand Hotel is a 100% smoke-free property. Smoking or vaping in guest rooms or indoor public areas is strictly prohibited and subject to a deep-cleaning restoration fee of INR 5,000. An outdoor smoking gazebo is available in the ground floor garden courtyard.",
+    "children": "Children aged 5 and under stay free when sharing existing bedding with parents. Baby cots and cribs are provided complimentary upon advance request. Extra rollaway beds for older children/adults are available for INR 1,200 per night in suites.",
+    "id_requirements": "All guests must present a valid government-approved photo ID (Passport, Aadhaar Card, Driving License, or Voter ID) at check-in. PAN cards are not accepted as valid identity proof under local hospitality regulations."
+  },
+  "faqs": [
+    {
+      "question": "What time is check-in?",
+      "answer": "Check-in is from 3:00 PM onwards. Early check-in from 9:00 AM is subject to room availability upon arrival, or can be guaranteed in advance for INR 1,500."
+    },
+    {
+      "question": "What time is check-out?",
+      "answer": "Check-out is at 11:00 AM. Late check-out up to 3:00 PM can be arranged for INR 1,500 based on availability."
+    },
+    {
+      "question": "Does the hotel have a swimming pool?",
+      "answer": "Yes, our 15th-floor heated rooftop infinity pool offers stunning panoramic views of Bengaluru and is open daily from 6:00 AM to 10:00 PM. It is complimentary for all in-house guests."
+    },
+    {
+      "question": "Is breakfast included?",
+      "answer": "An international breakfast buffet at The Glasshouse Bistro is included complimentary with Executive King Suite and Presidential Family Suite bookings. For Deluxe Room guests on room-only rates, the breakfast buffet is INR 850 + taxes per guest."
+    },
+    {
+      "question": "What is the cancellation policy?",
+      "answer": "You can cancel free of charge up to 24 hours prior to check-in (3:00 PM on the day before arrival). Cancellations within 24 hours or no-shows are billed for one night."
+    },
+    {
+      "question": "Which room is suitable for three guests?",
+      "answer": "Our Executive King Suite is ideal for three guests (featuring 1 King Bed plus a premium pull-out sofa bed in a spacious 58 sqm suite). Alternatively, our Presidential Family Suite easily accommodates up to four guests."
+    },
+    {
+      "question": "What amenities do you have?",
+      "answer": "StayAI Grand Hotel features a heated Rooftop Infinity Pool (6 AM - 10 PM), a 24/7 Wellness Gym, Aura Spa & Steam Sauna (8 AM - 9 PM), complimentary 500 Mbps high-speed Wi-Fi throughout, complimentary 24/7 valet parking with EV charging, and three dining venues including The Glasshouse Bistro and Skyline Rooftop Lounge."
+    },
+    {
+      "question": "Do you offer airport transfers?",
+      "answer": "Yes, we provide private chauffeur-driven luxury transfers to Kempegowda International Airport (BLR) for a flat rate of INR 1,800. Presidential Family Suite guests receive one complimentary one-way transfer."
+    },
+    {
+      "question": "Can I store luggage before check-in or after check-out?",
+      "answer": "Yes, our 24/7 concierge offers complimentary secure luggage storage for guests arriving early or departing late on the day of stay."
+    }
+  ]
+}
