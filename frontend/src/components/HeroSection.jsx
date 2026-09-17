@@ -25,8 +25,9 @@ export default function HeroSection({ guestName, onOpenConcierge }) {
               <Star key={i} className="w-3 h-3 fill-amber-400" />
             ))}
           </div>
-          <span>Luxury Boutique Hotel ? Bengaluru</span>
+          <span>Luxury Boutique Hotel • Bengaluru</span>
         </div>
+
 
         {/* Main Headline */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4 leading-tight">

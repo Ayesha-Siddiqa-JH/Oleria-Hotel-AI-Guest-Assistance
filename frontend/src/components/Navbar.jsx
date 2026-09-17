@@ -15,7 +15,6 @@ export default function Navbar({ guestName, onOpenConcierge, onResetGuest }) {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'AI Concierge', href: '#concierge', highlight: true },
     { name: 'Rooms & Suites', href: '#rooms' },
     { name: 'Amenities', href: '#amenities' },
     { name: 'Dining', href: '#dining' },
@@ -48,7 +47,7 @@ export default function Navbar({ guestName, onOpenConcierge, onResetGuest }) {
               </span>
             </div>
             <p className="text-[11px] text-slate-300 font-medium hidden md:block">
-              MG Road ? Central Bengaluru
+              MG Road • Central Bengaluru
             </p>
           </div>
         </a>
@@ -59,49 +58,26 @@ export default function Navbar({ guestName, onOpenConcierge, onResetGuest }) {
             <a
               key={link.name}
               href={link.href}
-              className={`text-xs font-medium px-3 py-1.5 rounded-full transition-colors ${
-                link.highlight
-                  ? 'bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30'
-                  : 'text-slate-200 hover:text-white hover:bg-white/10'
-              }`}
+              className="text-xs font-medium px-3.5 py-1.5 rounded-full text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        {/* Right: Guest Name & AI Concierge Pill */}
+        {/* Right: Guest Greeting Badge (No duplicate concierge buttons) */}
         <div className="hidden sm:flex items-center gap-3">
-          {/* Guest Greeting Badge */}
-          <div className="flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-3 py-1 rounded-full text-xs text-slate-200">
+          <div className="flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-3.5 py-1.5 rounded-full text-xs text-slate-200 shadow-xs">
             <User className="w-3.5 h-3.5 text-amber-400" />
-            <span className="font-medium max-w-[100px] truncate">{guestName}</span>
+            <span className="font-medium max-w-[120px] truncate">{guestName}</span>
             <button
               onClick={onResetGuest}
               title="Change guest name"
-              className="text-slate-400 hover:text-slate-200 ml-1 transition-colors"
+              className="text-slate-400 hover:text-amber-300 ml-1 transition-colors cursor-pointer"
             >
               <LogOut className="w-3 h-3" />
             </button>
           </div>
-
-          {/* AI Status Badge */}
-          <div className="flex items-center gap-1.5 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1 rounded-full text-xs text-emerald-300">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span className="font-medium">AI Concierge</span>
-          </div>
-
-          {/* Ask Concierge CTA */}
-          <button
-            onClick={onOpenConcierge}
-            className="flex items-center gap-1.5 bg-amber-600 hover:bg-amber-500 active:bg-amber-700 text-slate-950 font-semibold text-xs px-3.5 py-1.5 rounded-full shadow-md shadow-amber-950/30 transition-all cursor-pointer"
-          >
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Ask Concierge</span>
-          </button>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -122,10 +98,16 @@ export default function Navbar({ guestName, onOpenConcierge, onResetGuest }) {
               <User className="w-4 h-4 text-amber-400" />
               <span>Welcome, {guestName}</span>
             </div>
-            <div className="flex items-center gap-1.5 text-emerald-400 text-[11px]">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Online Concierge</span>
-            </div>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onResetGuest();
+              }}
+              className="flex items-center gap-1 text-slate-400 hover:text-amber-300 text-xs"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Change Guest</span>
+            </button>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
@@ -134,41 +116,15 @@ export default function Navbar({ guestName, onOpenConcierge, onResetGuest }) {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-xs p-2.5 rounded-xl block text-center font-medium transition-colors ${
-                  link.highlight
-                    ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                    : 'bg-slate-800/80 text-slate-200 hover:bg-slate-800'
-                }`}
+                className="text-xs p-2.5 rounded-xl block text-center font-medium bg-slate-800/80 text-slate-200 hover:bg-slate-800 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-          </div>
-
-          <div className="pt-2 flex gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenConcierge();
-              }}
-              className="flex-1 py-2.5 rounded-xl bg-amber-600 text-slate-950 text-xs font-semibold flex items-center justify-center gap-1.5"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>Ask AI Concierge</span>
-            </button>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onResetGuest();
-              }}
-              className="px-3 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs hover:text-white"
-              title="Change guest"
-            >
-              <LogOut className="w-4 h-4" />
-            </button>
           </div>
         </div>
       )}
     </header>
   );
 }
+

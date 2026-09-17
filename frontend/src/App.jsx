@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ChatConcierge from './components/ChatConcierge';
@@ -8,7 +8,7 @@ import DiningSection from './components/DiningSection';
 import Footer from './components/Footer';
 import WelcomeModal from './components/WelcomeModal';
 import { sendChatMessage } from './services/api';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, X } from 'lucide-react';
 
 export default function App() {
   const [guestName, setGuestName] = useState(() => {
@@ -19,11 +19,13 @@ export default function App() {
     return !localStorage.getItem('stayai_guest_name');
   });
 
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   const buildInitialGreeting = (name) => {
     const greetingName = name && name !== 'Guest' && name !== 'Valued Guest' ? name : 'Guest';
     return {
       role: 'assistant',
-      content: `Welcome to StayAI Grand Hotel Bengaluru, ${greetingName} ??\n\nI am your 24/7 AI Guest Concierge. How may I assist your stay today?\n\nYou can ask me about our 15th-floor heated rooftop pool, breakfast timings at The Glasshouse Bistro, early check-in, pet policies, or search live suite availability!`,
+      content: `Welcome to StayAI Grand Hotel Bengaluru, ${greetingName} ??\n\nI am your 24/7 AI Guest Concierge. How may I assist your stay today?\n\nYou can ask me about our 15th-floor heated rooftop pool, breakfast buffet hours, room recommendations, cancellation policy, or check live availability!`,
       timestamp: 'Just now',
     };
   };
@@ -46,18 +48,12 @@ export default function App() {
     setShowWelcomeModal(true);
   };
 
-  const scrollToConcierge = () => {
-    const el = document.getElementById('concierge');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleSendMessage = async (userText) => {
     if (!userText.trim() || isLoading) return;
 
     setError(null);
     setLastUserMessage(userText);
+    setIsChatOpen(true); // Ensure chat is open when sending
 
     const now = new Date();
     const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -110,12 +106,12 @@ export default function App() {
   const handleAskAboutRoom = (roomName) => {
     const prompt = `Can you tell me more about the ${roomName}, its bed configuration, and what amenities are included?`;
     handleSendMessage(prompt);
-    scrollToConcierge();
+    setIsChatOpen(true);
   };
 
   const handleAskConcierge = (query) => {
     handleSendMessage(query);
-    scrollToConcierge();
+    setIsChatOpen(true);
   };
 
   const handleRetry = () => {
@@ -140,26 +136,13 @@ export default function App() {
       {/* Top Floating Luxury Navbar */}
       <Navbar
         guestName={guestName || 'Guest'}
-        onOpenConcierge={scrollToConcierge}
         onResetGuest={handleResetGuest}
       />
 
       {/* Hero Section */}
       <HeroSection
         guestName={guestName}
-        onOpenConcierge={scrollToConcierge}
-      />
-
-      {/* Interactive AI Concierge Salon */}
-      <ChatConcierge
-        guestName={guestName || 'Guest'}
-        messages={messages}
-        isLoading={isLoading}
-        error={error}
-        onSendMessage={handleSendMessage}
-        onRetry={lastUserMessage ? handleRetry : null}
-        onResetChat={handleResetChat}
-        onSelectSuggestion={handleSendMessage}
+        onOpenConcierge={() => setIsChatOpen(true)}
       />
 
       {/* Dedicated Availability Search & Room Cards Grid */}
@@ -174,14 +157,42 @@ export default function App() {
       {/* Comprehensive Hotel Footer */}
       <Footer />
 
-      {/* Floating Concierge Action Button */}
+      {/* Compact Floating AI Concierge Popup Window */}
+      <ChatConcierge
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+        guestName={guestName || 'Guest'}
+        messages={messages}
+        isLoading={isLoading}
+        error={error}
+        onSendMessage={handleSendMessage}
+        onRetry={lastUserMessage ? handleRetry : null}
+        onResetChat={handleResetChat}
+        onSelectSuggestion={handleSendMessage}
+      />
+
+      {/* Single Persistent Floating AI Concierge Button (Fixed Bottom-Right) */}
       <button
-        onClick={scrollToConcierge}
-        title="Open AI Concierge"
-        className="fixed bottom-6 right-6 z-30 p-3.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold shadow-2xl shadow-amber-950/60 hover:scale-110 active:scale-95 transition-all flex items-center gap-2 cursor-pointer border border-amber-300/40"
+        onClick={() => setIsChatOpen((prev) => !prev)}
+        title={isChatOpen ? "Close AI Concierge" : "Open AI Concierge"}
+        aria-label="Toggle AI Concierge"
+        className="fixed bottom-6 right-4 sm:right-6 z-50 px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-400 hover:to-amber-500 active:scale-95 text-slate-950 font-bold shadow-2xl shadow-amber-950/60 transition-all duration-200 flex items-center gap-2.5 cursor-pointer border border-amber-300/40"
       >
-        <MessageSquare className="w-5 h-5 text-slate-950" />
-        <span className="text-xs hidden sm:inline-block font-semibold">AI Concierge</span>
+        {isChatOpen ? (
+          <>
+            <X className="w-4 h-4 text-slate-950" />
+            <span className="text-xs font-bold tracking-wide">Close Concierge</span>
+          </>
+        ) : (
+          <>
+            <div className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-950"></span>
+            </div>
+            <MessageSquare className="w-4 h-4 text-slate-950" />
+            <span className="text-xs font-bold tracking-wide">AI Concierge</span>
+          </>
+        )}
       </button>
     </div>
   );
