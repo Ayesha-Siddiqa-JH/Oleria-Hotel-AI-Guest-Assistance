@@ -15,7 +15,8 @@ async def check_room_availability(payload: AvailabilityRequest):
         result = availability_service.check_availability(
             check_in=payload.check_in,
             check_out=payload.check_out,
-            adults=payload.adults
+            adults=payload.adults,
+            hotel_id=payload.hotel_id
         )
 
         if not result.get("success", False):
@@ -29,6 +30,7 @@ async def check_room_availability(payload: AvailabilityRequest):
         return AvailabilityResponse(
             success=True,
             available=result.get("available", False),
+            hotel_id=result.get("hotel_id", payload.hotel_id),
             check_in=result.get("check_in"),
             check_out=result.get("check_out"),
             adults=result.get("adults"),

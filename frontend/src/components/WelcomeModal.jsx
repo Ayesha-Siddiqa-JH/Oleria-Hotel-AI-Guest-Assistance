@@ -16,11 +16,18 @@ export default function WelcomeModal({ onEnter }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4 transition-all duration-300">
+    <div className="min-h-screen w-full flex items-center justify-center bg-slate-950 p-4 transition-all duration-300 relative overflow-hidden font-sans">
+      {/* Ambient background scene */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 filter blur-sm pointer-events-none scale-105"
+        style={{ backgroundImage: `url(${HOTEL_IMAGES.hero})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/80 pointer-events-none" />
+
       <div 
-        className="relative w-full max-w-xl overflow-hidden rounded-3xl bg-slate-900 border border-amber-500/30 shadow-2xl text-white"
+        className="relative w-full max-w-xl overflow-hidden rounded-3xl bg-slate-900/95 border border-amber-500/30 shadow-2xl text-white backdrop-blur-xl z-10"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.96)), url(${HOTEL_IMAGES.hero})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), url(${HOTEL_IMAGES.hero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -39,17 +46,17 @@ export default function WelcomeModal({ onEnter }) {
 
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-medium tracking-wide uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>5-Star Luxury Sanctuary ? Bengaluru</span>
+            <span>5 Luxury Destinations • Intelligent Hospitality</span>
           </div>
 
           <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
-            StayAI Grand Hotel
+            OLERIA HOTEL
           </h2>
           <p className="text-sm font-medium text-amber-200/90 mb-2">
-            Your Intelligent Hotel Concierge
+            AI-Powered Guest Experience & Concierge
           </p>
           <p className="text-xs sm:text-sm text-slate-300 max-w-md mb-8 leading-relaxed">
-            Discover your stay, explore our heated infinity pool & dining, and receive real-time grounded assistance with AI.
+            Bengaluru • Goa • Mumbai • Delhi • Jaipur. Connect natural-language requests to hotel-specific room booking, in-room dining, and hotel services.
           </p>
 
           {/* Simple Entry Form */}
@@ -86,7 +93,7 @@ export default function WelcomeModal({ onEnter }) {
           {/* Trust note */}
           <div className="mt-6 pt-5 border-t border-slate-800/80 flex items-center gap-2 text-[11px] text-slate-400">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>No password required ? Instant interactive concierge access</span>
+            <span>Fictional Demonstration Platform • Instant interactive concierge access</span>
           </div>
         </div>
       </div>

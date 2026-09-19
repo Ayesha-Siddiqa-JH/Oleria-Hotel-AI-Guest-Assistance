@@ -1,70 +1,92 @@
 import React from 'react';
-import { Waves, Sparkles, Dumbbell, Wifi, Car, Clock, Shield, MessageSquare } from 'lucide-react';
+import { Waves, Sparkles, Dumbbell, Wifi, Car, Clock, Shield, MessageSquare, Compass, Sun } from 'lucide-react';
 import { HOTEL_IMAGES } from '../data/hotelImages';
 
-export default function AmenitiesSection({ onAskConcierge }) {
-  const amenities = [
-    {
-      title: 'Rooftop Infinity Pool',
-      image: HOTEL_IMAGES.pool,
-      icon: Waves,
-      hours: '6:00 AM ? 10:00 PM',
-      cost: 'Complimentary for Guests',
-      description:
-        'A temperature-controlled 15th-floor open-air swimming pool offering panoramic vistas of Bengaluru, plush sun loungers, and poolside refreshments.',
-      query: 'What are the swimming pool timings and rules?',
-    },
-    {
-      title: 'Aura Spa & Steam Sauna',
-      image: HOTEL_IMAGES.spa,
-      icon: Sparkles,
-      hours: '8:00 AM ? 9:00 PM',
-      cost: 'Treatments Per Menu',
-      description:
-        'Holistic Ayurvedic therapies, aromatherapy massages, steam bath, and Finnish dry sauna designed to restore balance and vitality.',
-      query: 'Tell me about the spa facilities and timings',
-    },
-    {
-      title: '24/7 Wellness Gym',
-      image: HOTEL_IMAGES.gym,
-      icon: Dumbbell,
-      hours: 'Open 24 Hours',
-      cost: 'Complimentary Access',
-      description:
-        'Equipped with modern TechnoGym treadmills, ellipticals, free weights, resistance cables, and a dedicated zen yoga stretching pavilion.',
-      query: 'Do you have gym facilities and what are the hours?',
-    },
-    {
-      title: 'Ultra-Fast 500 Mbps Wi-Fi',
-      image: HOTEL_IMAGES.wifi,
-      icon: Wifi,
-      hours: 'Always Connected',
-      cost: 'Complimentary Unlimited',
-      description:
-        'Enterprise-grade fiber optic Wi-Fi accessible seamlessly across all suites, meeting rooms, lounges, and outdoor garden terraces.',
-      query: 'Is Wi-Fi free and what is the speed?',
-    },
-    {
-      title: 'Valet Parking & EV Charging',
-      image: HOTEL_IMAGES.valet,
-      icon: Car,
-      hours: '24/7 Attendants',
-      cost: 'Complimentary Valet',
-      description:
-        'Secure multi-level underground parking with round-the-clock valet service and four Type-2 high-speed EV charging stations.',
-      query: 'Do you have parking and EV charging?',
-    },
-    {
-      title: 'Concierge & Luggage Storage',
-      image: HOTEL_IMAGES.lobby,
-      icon: Clock,
-      hours: '24/7 Front Desk',
-      cost: 'Complimentary Storage',
-      description:
-        'Personalized travel assistance, secure luggage holding before check-in/after check-out, and luxury airport sedan transfers.',
-      query: 'Can I store luggage before check-in or after check-out?',
-    },
-  ];
+export default function AmenitiesSection({ hotelData, onAskConcierge }) {
+  const city = hotelData?.city || 'Bengaluru';
+
+  // Customize amenities descriptions based on selected hotel
+  const getCityAmenities = () => {
+    if (hotelData?.amenities && hotelData.amenities.length >= 4) {
+      return hotelData.amenities.map((a, i) => {
+        let image = HOTEL_IMAGES.pool;
+        let icon = Waves;
+        if (i === 1) { image = HOTEL_IMAGES.spa; icon = Sparkles; }
+        else if (i === 2) { image = HOTEL_IMAGES.gym; icon = Dumbbell; }
+        else if (i === 3) { image = HOTEL_IMAGES.lobby; icon = Compass; }
+
+        return {
+          title: a.name,
+          image: image,
+          icon: icon,
+          hours: a.timings || 'Daily Hours',
+          cost: a.cost || 'Complimentary for Guests',
+          description: a.details,
+          query: `Tell me about ${a.name} and timings at ${hotelData.hotel_name}`
+        };
+      });
+    }
+
+    // Default rich amenities
+    return [
+      {
+        title: `${city} Rooftop Infinity Pool`,
+        image: HOTEL_IMAGES.pool,
+        icon: Waves,
+        hours: '6:00 AM – 10:00 PM',
+        cost: 'Complimentary for Guests',
+        description: `A temperature-controlled open-air swimming pool offering scenic vistas of ${city}, plush loungers, and poolside refreshments.`,
+        query: `What are the swimming pool timings and rules at ${hotelData?.hotel_name || 'the hotel'}?`,
+      },
+      {
+        title: 'Aura Luxury Spa & Hydrotherapy',
+        image: HOTEL_IMAGES.spa,
+        icon: Sparkles,
+        hours: '8:00 AM – 9:00 PM',
+        cost: 'Treatments Per Menu',
+        description: 'Holistic Ayurvedic therapies, aromatherapy massages, steam baths, and signature relaxation rituals.',
+        query: 'Tell me about the spa facilities and timings',
+      },
+      {
+        title: '24/7 Technogym Wellness Center',
+        image: HOTEL_IMAGES.gym,
+        icon: Dumbbell,
+        hours: 'Open 24 Hours',
+        cost: 'Complimentary Access',
+        description: 'Equipped with modern cardiovascular treadmills, ellipticals, free weights, resistance cables, and a zen yoga pavilion.',
+        query: 'Do you have gym facilities and what are the hours?',
+      },
+      {
+        title: 'Ultra-Fast 500 Mbps Fiber Wi-Fi',
+        image: HOTEL_IMAGES.wifi,
+        icon: Wifi,
+        hours: 'Always Connected',
+        cost: 'Complimentary Unlimited',
+        description: 'Enterprise-grade fiber optic Wi-Fi accessible seamlessly across all suites, meeting rooms, lounges, and outdoor terraces.',
+        query: 'Is Wi-Fi free and what is the speed?',
+      },
+      {
+        title: 'Valet Parking & High-Speed EV Charging',
+        image: HOTEL_IMAGES.valet,
+        icon: Car,
+        hours: '24/7 Attendants',
+        cost: 'Complimentary Valet',
+        description: 'Secure multi-level parking with round-the-clock valet service and Type-2 high-speed EV charging stations.',
+        query: 'Do you have parking and EV charging?',
+      },
+      {
+        title: '24/7 Dedicated Concierge & Transfers',
+        image: HOTEL_IMAGES.lobby,
+        icon: Clock,
+        hours: '24/7 Front Desk',
+        cost: 'Complimentary Assistance',
+        description: 'Personalized travel assistance, secure luggage holding before check-in or after check-out, and luxury airport sedan transfers.',
+        query: 'Can I store luggage before check-in or after check-out?',
+      },
+    ];
+  };
+
+  const amenities = getCityAmenities();
 
   return (
     <section id="amenities" className="py-20 bg-slate-50 relative">
@@ -72,13 +94,13 @@ export default function AmenitiesSection({ onAskConcierge }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100/70 border border-amber-200 px-3 py-1 rounded-full inline-block mb-3">
-            World-Class Facilities
+            World-Class Facilities • {city}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-950 mb-3 tracking-tight">
             Curated Resort Amenities
           </h2>
           <p className="text-sm sm:text-base text-slate-600 font-light">
-            Every convenience designed to elevate your stay, from our heated rooftop pool to 24/7 fitness and wellness services.
+            Every convenience crafted to elevate your stay at <strong>{hotelData?.hotel_name || 'Oleria Hotel'}</strong>.
           </p>
         </div>
 
@@ -89,7 +111,7 @@ export default function AmenitiesSection({ onAskConcierge }) {
             return (
               <div
                 key={idx}
-                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-xl hover:border-amber-400/60 transition-all duration-300 flex flex-col justify-between"
+                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-400/60 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Photo */}
                 <div className="relative h-48 w-full overflow-hidden bg-slate-800">
@@ -99,41 +121,42 @@ export default function AmenitiesSection({ onAskConcierge }) {
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/10" />
-
-                  <span className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md text-amber-300 border border-amber-400/20 text-[11px] font-medium px-2.5 py-0.5 rounded-full">
-                    {item.cost}
-                  </span>
-
-                  <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white">
-                    <div className="w-8 h-8 rounded-xl bg-amber-600 flex items-center justify-center text-slate-950">
-                      <Icon className="w-4 h-4" />
-                    </div>
-                    <h3 className="font-serif font-bold text-lg text-white">
-                      {item.title}
-                    </h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/20" />
+                  <div className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md text-amber-300 border border-amber-400/30 text-[11px] font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
+                    <Clock className="w-3 h-3 text-amber-400" />
+                    <span>{item.hours}</span>
                   </div>
                 </div>
 
-                {/* Body */}
+                {/* Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <div className="flex items-center gap-1.5 text-xs text-amber-900 font-semibold mb-2">
-                      <Clock className="w-3.5 h-3.5 text-amber-700" />
-                      <span>{item.hours}</span>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-amber-100/80 flex items-center justify-center text-amber-800">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <h3 className="font-serif text-lg font-bold text-slate-950">
+                        {item.title}
+                      </h3>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <button
-                    onClick={() => onAskConcierge && onAskConcierge(item.query)}
-                    className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-amber-600 hover:text-slate-950 active:scale-[0.98] text-slate-700 text-xs font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5" />
-                    <span>Inquire About This</span>
-                  </button>
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                      {item.cost}
+                    </span>
+
+                    <button
+                      onClick={() => onAskConcierge && onAskConcierge(item.query)}
+                      className="text-xs text-amber-800 hover:text-amber-950 font-medium flex items-center gap-1 cursor-pointer transition-colors"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Ask Details</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             );

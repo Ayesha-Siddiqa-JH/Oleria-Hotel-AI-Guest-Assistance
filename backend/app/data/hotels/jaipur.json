@@ -1,0 +1,280 @@
+{
+  "hotel_id": "jaipur",
+  "hotel_name": "Oleria Jaipur Palace",
+  "city": "Jaipur",
+  "tagline": "Royal Rajputana Grandeur & Historic Haveli Splendor",
+  "star_rating": 5,
+  "hero_image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1920&q=80",
+  "address": {
+    "street": "Jacob Road, Civil Lines",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "postal_code": "302006",
+    "country": "India",
+    "landmark": "Near Raj Bhavan & Hawa Mahal"
+  },
+  "contact": {
+    "phone": "+91 141 222 7000",
+    "email": "concierge.jaipur@oleriahotels.com",
+    "website": "https://oleriahotels.com/jaipur",
+    "concierge_ext": "Ext 0 / 500"
+  },
+  "timings": {
+    "check_in": "2:00 PM",
+    "check_out": "11:00 AM",
+    "reception": "24/7 Royal Concierge",
+    "early_check_in_policy": "Early check-in from 10:00 AM based on royal suite availability.",
+    "late_check_out_policy": "Late check-out up to 3:00 PM for INR 1,500."
+  },
+  "rooms": [
+    {
+      "room_type_id": "heritage_haveli_room",
+      "name": "Heritage Haveli Room",
+      "capacity": 2,
+      "bed_type": "1 King Bed with Hand-carved Teak Headboard",
+      "size_sqm": 44,
+      "view": "Palace Courtyard & Peacock Gardens",
+      "price_per_night": 5800,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "description": "Authentic Rajasthani architecture featuring ornate jharokha bay windows, block-printed fabrics, and handcrafted brass lanterns.",
+      "amenities": [
+        "Traditional Jharokha Window Seating",
+        "Handcrafted Block-Printed Linens",
+        "Marble Bathroom with Hammered Copper Basins",
+        "High-Speed Wi-Fi (300 Mbps)",
+        "Welcome Royal Saffron Milk on Arrival"
+      ]
+    },
+    {
+      "room_type_id": "maharaja_suite",
+      "name": "Maharaja Royal Suite",
+      "capacity": 3,
+      "bed_type": "1 Grand King Four-Poster Bed + 1 Royal Diwan",
+      "size_sqm": 72,
+      "view": "Panoramic Pink City & Aravalli Hills",
+      "price_per_night": 9200,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Opulent royal suite featuring frescoed ceilings, antique Belgian chandeliers, a private royal diwan parlor, and palace lounge access.",
+      "amenities": [
+        "Palace Club Privileges & Royal High Tea",
+        "Private Royal Diwan Parlor",
+        "Deep Marble Soaking Tub",
+        "Daily Royal Evening Cultural Dance Show Access",
+        "Espresso Machine & Fresh Organic Nuts"
+      ]
+    },
+    {
+      "room_type_id": "rajputana_palace_suite",
+      "name": "Rajputana Grand Palace Suite",
+      "capacity": 4,
+      "bed_type": "2 Royal Master Suites with En-suite Bathrooms",
+      "size_sqm": 115,
+      "view": "Palace Courtyard & Private Rooftop Pavilion",
+      "price_per_night": 15500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "description": "The epitome of Rajput princely hospitality, with 2 king master bedrooms, private marble fountain courtyard, and 24/7 Royal Khansama butler.",
+      "amenities": [
+        "Private Rooftop Pavilion with Aravalli Views",
+        "Dedicated 24/7 Royal Khansama (Personal Butler)",
+        "Complimentary Jaipur Airport Chauffeur (JAI)",
+        "Complimentary Royal Rajputana Breakfast Buffet for 4",
+        "Complimentary Heritage Palace Walk with Historian"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "name": "Sheesh Mahal Fine Dining",
+      "cuisine": "Royal Rajasthani Thalis, Laal Maas, and Princely Vegetarian Feasts",
+      "timings": "12:30 PM \u2013 3:30 PM, 7:30 PM \u2013 11:00 PM",
+      "breakfast_timings": "7:00 AM \u2013 10:30 AM at Jharokha Verandah",
+      "breakfast_inclusion": "Complimentary royal breakfast buffet for Maharaja and Rajputana Suite guests. INR 800 + taxes for Heritage Haveli guests.",
+      "highlights": "Dine surrounded by thousands of handcrafted mirror tiles under candlelight."
+    },
+    {
+      "name": "Jharokha Verandah",
+      "cuisine": "All-Day Casual Indian & Global Comfort Fare",
+      "timings": "7:00 AM \u2013 11:00 PM",
+      "highlights": "Overlooking royal peacock lawns with live traditional Santoor music."
+    }
+  ],
+  "menu": [
+    {
+      "id": "jai-bev-1",
+      "name": "Royal Saffron Almond Thandai",
+      "category": "Beverages",
+      "price": 240,
+      "description": "Slow-ground crushed almonds, fennel seeds, watermelon seeds, rose petals, and pure Kashmiri saffron infused in chilled milk.",
+      "tags": [
+        "beverage",
+        "cold",
+        "sweet",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-bev-2",
+      "name": "Cardamom & Clove Masala Chai",
+      "category": "Beverages",
+      "price": 190,
+      "description": "Rich whole-milk chai simmered with cracked green cardamom pods and fragrant cloves in a clay kulhad.",
+      "tags": [
+        "beverage",
+        "tea",
+        "hot",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-lt-1",
+      "name": "Light Yellow Moong Dal Khichda",
+      "category": "Light Meals",
+      "price": 380,
+      "description": "Gentle, mild comfort meal of split lentils and rice seasoned with mild cumin and pure desi ghee, served with homemade yogurt.",
+      "tags": [
+        "light",
+        "comfort",
+        "vegetarian",
+        "warm"
+      ],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-lt-2",
+      "name": "Spiced Tomato & Basil Tamatar Shorba",
+      "category": "Light Meals",
+      "price": 320,
+      "description": "Clear roasted country tomato soup infused with fresh coriander roots and roasted cumin crunch.",
+      "tags": [
+        "light",
+        "soup",
+        "comfort",
+        "vegetarian",
+        "healthy"
+      ],
+      "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-veg-1",
+      "name": "Authentic Rajasthani Dal Baati Churma",
+      "category": "Vegetarian",
+      "price": 560,
+      "description": "Five-lentil panchmel dal served with baked whole wheat baatis dipped in pure ghee, accompanied by sweet jaggery churma.",
+      "tags": [
+        "vegetarian",
+        "main",
+        "rajasthani"
+      ],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-bf-1",
+      "name": "Crisp Pyaz Pyaaz Kachori with Mint Chutney",
+      "category": "Breakfast",
+      "price": 320,
+      "description": "Flaky golden kachoris stuffed with caramelized spiced onions and potatoes, served with tamarind chutney.",
+      "tags": [
+        "breakfast",
+        "snack",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "jai-des-1",
+      "name": "Jaipur Malpua with Saffron Rabdi",
+      "category": "Desserts",
+      "price": 340,
+      "description": "Delicate pancakes fried in pure ghee, dipped in sugar syrup and smothered in thick saffron-pistachio rabdi.",
+      "tags": [
+        "desserts",
+        "sweet",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Royal Stepwell Swimming Pool",
+      "details": "Dramatic marble pool designed like a historic Rajasthani baori (stepwell) with cooling waters.",
+      "timings": "7:00 AM \u2013 8:30 PM",
+      "cost": "Complimentary",
+      "icon": "pool"
+    },
+    {
+      "name": "Maharani Palace Spa",
+      "details": "Herbal scrubs using organic sandalwood, rose water, and ancient Ayurvedic rituals.",
+      "timings": "8:30 AM \u2013 8:30 PM",
+      "cost": "Priced per menu",
+      "icon": "spa"
+    },
+    {
+      "name": "Evening Folk Dance & Puppet Show",
+      "details": "Complimentary daily Kalbelia dance, puppet performance, and flute music in the courtyard.",
+      "timings": "6:30 PM \u2013 8:00 PM daily",
+      "cost": "Complimentary for all guests",
+      "icon": "theater"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "extra_pillows",
+      "name": "Extra Pillows",
+      "category": "Housekeeping",
+      "description": "Soft feather or firm orthopedic pillows.",
+      "delivery_time": "15 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "extra_towels",
+      "name": "Extra Towels",
+      "category": "Housekeeping",
+      "description": "Warm fresh bath sheets and hand towels.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "water_bottles",
+      "name": "Complimentary Water Bottles",
+      "category": "Housekeeping",
+      "description": "Glass bottles of fresh Himalayan spring water.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "airport_transfer",
+      "name": "Private Airport Chauffeur (JAI)",
+      "category": "Concierge",
+      "description": "Private chauffeur transfer to Jaipur International Airport (Sanganer).",
+      "delivery_time": "Reserve 2 hours in advance",
+      "cost": "INR 1,600 flat rate"
+    }
+  ],
+  "policies": {
+    "cancellation": "Free cancellation up to 48 hours prior to check-in.",
+    "pets": "Pets are not permitted due to palace heritage preservation guidelines.",
+    "smoking": "100% smoke-free property. Penalty INR 5,000 applies.",
+    "children": "Children under 6 stay free.",
+    "id_requirements": "Valid government ID required at check-in."
+  },
+  "faqs": [
+    {
+      "question": "What time is check-in?",
+      "answer": "Check-in at Oleria Jaipur Palace is from 2:00 PM onwards, and check-out is at 11:00 AM."
+    },
+    {
+      "question": "Where is the palace located?",
+      "answer": "Oleria Jaipur Palace is situated on Jacob Road, Civil Lines, Jaipur, near Raj Bhavan and minutes away from the historic City Palace and Hawa Mahal."
+    },
+    {
+      "question": "Does the hotel have a pool?",
+      "answer": "Yes, our Royal Stepwell Pool is crafted from hand-chiseled white marble inspired by ancient Rajput baoris and is open from 7:00 AM to 8:30 PM."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-// Curated high-resolution photography for StayAI Grand Hotel Bengaluru
+// Curated high-resolution photography for Oleria Hotels & Resorts
 // Royalty-free luxury hospitality images from Unsplash with reliable fallbacks
 
 export const HOTEL_IMAGES = {

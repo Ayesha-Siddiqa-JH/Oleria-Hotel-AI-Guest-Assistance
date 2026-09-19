@@ -1,0 +1,281 @@
+{
+  "hotel_id": "mumbai",
+  "hotel_name": "Oleria Mumbai",
+  "city": "Mumbai",
+  "tagline": "Coastal Luxury & Oceanfront Prestige on Marine Drive",
+  "star_rating": 5,
+  "hero_image": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1920&q=80",
+  "address": {
+    "street": "108 Marine Drive, Nariman Point",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "postal_code": "400021",
+    "country": "India",
+    "landmark": "Overlooking the Queen's Necklace promenade"
+  },
+  "contact": {
+    "phone": "+91 22 6680 4000",
+    "email": "concierge.mumbai@oleriahotels.com",
+    "website": "https://oleriahotels.com/mumbai",
+    "concierge_ext": "Ext 0 / 300"
+  },
+  "timings": {
+    "check_in": "3:00 PM",
+    "check_out": "12:00 PM",
+    "reception": "24/7 Front Desk Concierge",
+    "early_check_in_policy": "Early check-in from 8:00 AM available on request for INR 2,000.",
+    "late_check_out_policy": "Late check-out up to 4:00 PM available for INR 2,000."
+  },
+  "rooms": [
+    {
+      "room_type_id": "bay_view_deluxe",
+      "name": "Bay View Deluxe Room",
+      "capacity": 2,
+      "bed_type": "1 King Bed or 2 Twin Beds",
+      "size_sqm": 42,
+      "view": "Unobstructed Arabian Sea & Queen's Necklace",
+      "price_per_night": 7500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "description": "Floor-to-ceiling glass windows framing panoramic Arabian Sea vistas, acoustic glazing, marble bathroom with deep tub, and Illy espresso bar.",
+      "amenities": [
+        "Panoramic Arabian Sea View",
+        "Acoustic Soundproof Glazing",
+        "Deep Soaking Freestanding Bathtub",
+        "Illy Espresso Coffee Machine",
+        "500 Mbps High-Speed Wi-Fi",
+        "60-inch 4K TV"
+      ]
+    },
+    {
+      "room_type_id": "marine_executive_suite",
+      "name": "Marine Executive Suite",
+      "capacity": 3,
+      "bed_type": "1 King Bed + 1 Rollaway Bed",
+      "size_sqm": 65,
+      "view": "Corner Sea & Skyline View",
+      "price_per_night": 11500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Spacious corner suite offering dual views of the Arabian Sea sunset and city lights, with a dedicated boardroom-style work lounge.",
+      "amenities": [
+        "Executive Club Lounge Access",
+        "Complimentary High Tea & Sunset Cocktails",
+        "Walk-in Wardrobe & Dressing Area",
+        "Dedicated Work Lounge for 4",
+        "Daily Complimentary Garment Steaming"
+      ]
+    },
+    {
+      "room_type_id": "queens_necklace_penthouse",
+      "name": "Queen's Necklace Penthouse",
+      "capacity": 4,
+      "bed_type": "2 Grand Master King Bedrooms",
+      "size_sqm": 110,
+      "view": "High-Floor 180\u00b0 Panoramic Arabian Sea",
+      "price_per_night": 19500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "description": "The crowning jewel of South Mumbai, featuring private rooftop terrace, dining room for 8, grand piano, and 24/7 dedicated butler.",
+      "amenities": [
+        "Private Rooftop Sunset Terrace",
+        "Dedicated 24/7 White-Glove Butler",
+        "Complimentary Airport Transfers (BOM)",
+        "Complimentary Breakfast for up to 4 Guests",
+        "Private Wine Cellar & Bar"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "name": "Zaffran & Tide Fine Dining",
+      "cuisine": "Modern Coastal Indian & Royal Mughlai Cuisine",
+      "timings": "12:00 PM \u2013 3:30 PM, 7:00 PM \u2013 11:30 PM",
+      "breakfast_timings": "6:30 AM \u2013 10:30 AM at The Bayview Brasserie",
+      "breakfast_inclusion": "Complimentary full buffet breakfast for Marine Executive Suite & Penthouse guests. INR 950 + taxes for Deluxe Room guests.",
+      "highlights": "Bespoke tasting menus paired with sommelier-curated global wines."
+    },
+    {
+      "name": "The Sea Lounge & Patisserie",
+      "cuisine": "English Afternoon High Tea, Single-Estate Coffees & French Pastries",
+      "timings": "8:00 AM \u2013 10:00 PM",
+      "highlights": "Grand piano performances accompanied by ocean sunsets."
+    }
+  ],
+  "menu": [
+    {
+      "id": "mum-bev-1",
+      "name": "Artisan Bombay Cutting Chai",
+      "category": "Beverages",
+      "price": 180,
+      "description": "Assam strong CTC tea leaves slow-simmered with freshly crushed lemongrass, ginger, and green cardamom.",
+      "tags": [
+        "beverage",
+        "tea",
+        "hot",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-bev-2",
+      "name": "Alphonso Mango Lassi",
+      "category": "Beverages",
+      "price": 260,
+      "description": "Rich artisanal whipped yogurt blended with Ratnagiri Alphonso mango pulp and saffron strands.",
+      "tags": [
+        "beverage",
+        "cold",
+        "sweet",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-lt-1",
+      "name": "Steamed Chicken / Veg Dim Sum Basket",
+      "category": "Light Meals",
+      "price": 420,
+      "description": "Six delicate translucent dumplings filled with water chestnuts, scallions, and shiitake mushrooms, served with ginger soy dip.",
+      "tags": [
+        "light",
+        "comfort",
+        "steamed",
+        "snack"
+      ],
+      "image": "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-lt-2",
+      "name": "Golden Turmeric & Lentil Comfort Soup",
+      "category": "Light Meals",
+      "price": 370,
+      "description": "Mild, soothing organic red lentil soup infused with fresh yellow turmeric, cumin, and cilantro.",
+      "tags": [
+        "light",
+        "soup",
+        "comfort",
+        "vegetarian",
+        "healthy"
+      ],
+      "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-veg-1",
+      "name": "Classic Mumbai Pav Bhaji Fondue",
+      "category": "Vegetarian",
+      "price": 460,
+      "description": "Rich spiced vegetable mash enriched with Amul butter, served fondue-style with warm buttered brioche pao.",
+      "tags": [
+        "vegetarian",
+        "mumbai",
+        "snack"
+      ],
+      "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-bf-1",
+      "name": "Mumbai Kanda Poha & Masala Omelette",
+      "category": "Breakfast",
+      "price": 390,
+      "description": "Flattened rice tempered with mustard, roasted peanuts, and curry leaves, accompanied by a fluffy masala omelette.",
+      "tags": [
+        "breakfast",
+        "comfort",
+        "indian"
+      ],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "mum-des-1",
+      "name": "Rose Petal Kulfi with Falooda Sev",
+      "category": "Desserts",
+      "price": 310,
+      "description": "Traditional dense slow-churned rose kulfi topped with basil seeds, chilled falooda sev, and rabdi.",
+      "tags": [
+        "desserts",
+        "sweet",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Infinity Sea View Pool",
+      "details": "Heated 8th-floor outdoor infinity pool looking directly out over the Arabian Sea waves.",
+      "timings": "6:00 AM \u2013 10:00 PM daily",
+      "cost": "Complimentary for guests",
+      "icon": "pool"
+    },
+    {
+      "name": "Sea Mist Spa & Salon",
+      "details": "Full-service luxury spa with aromatherapy, sauna, and ocean-facing couple treatment suites.",
+      "timings": "8:00 AM \u2013 9:00 PM",
+      "cost": "Priced per menu",
+      "icon": "spa"
+    },
+    {
+      "name": "24/7 Panoramic Fitness Centre",
+      "details": "High-tech gym equipped with LifeFitness machines facing the Queen's Necklace.",
+      "timings": "Open 24/7",
+      "cost": "Complimentary",
+      "icon": "gym"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "extra_pillows",
+      "name": "Extra Pillows",
+      "category": "Housekeeping",
+      "description": "Choice of down feather, memory foam, or buckwheat pillows.",
+      "delivery_time": "15 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "extra_towels",
+      "name": "Extra Towels",
+      "category": "Housekeeping",
+      "description": "Luxury oversized bath towels and washcloths.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "water_bottles",
+      "name": "Complimentary Water Bottles",
+      "category": "Housekeeping",
+      "description": "Sealed sparkling or still premium spring water bottles.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "airport_transfer",
+      "name": "Private Airport Chauffeur (CSMT / BOM)",
+      "category": "Concierge",
+      "description": "Private luxury sedan transfer to Chhatrapati Shivaji Maharaj International Airport via coastal road.",
+      "delivery_time": "Book 2 hours in advance",
+      "cost": "INR 2,000 flat rate"
+    }
+  ],
+  "policies": {
+    "cancellation": "Free cancellation up to 24 hours prior to arrival.",
+    "pets": "Pets not permitted due to high-rise building regulations.",
+    "smoking": "100% non-smoking property. Penalty INR 5,000 applies for room smoking.",
+    "children": "Children under 6 stay free.",
+    "id_requirements": "Valid government photo ID required at check-in."
+  },
+  "faqs": [
+    {
+      "question": "What time is check-in?",
+      "answer": "Check-in at Oleria Mumbai is from 3:00 PM onwards, and check-out is at 12:00 PM noon."
+    },
+    {
+      "question": "Where is the hotel located?",
+      "answer": "Oleria Mumbai is located at 108 Marine Drive, Nariman Point, directly overlooking the Arabian Sea and the Queen's Necklace promenade."
+    },
+    {
+      "question": "Does the hotel have a pool?",
+      "answer": "Yes, our 8th-floor heated outdoor infinity pool offers direct sea views and is open daily from 6:00 AM to 10:00 PM."
+    }
+  ]
+}

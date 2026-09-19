@@ -1,16 +1,31 @@
 import React from 'react';
-import { MessageSquare, Calendar, MapPin, Clock, Waves, Sparkles, Star } from 'lucide-react';
-import { HOTEL_IMAGES } from '../data/hotelImages';
+import { MessageSquare, Calendar, MapPin, Clock, Waves, Sparkles, Star, Building2 } from 'lucide-react';
 
-export default function HeroSection({ guestName, onOpenConcierge }) {
+const CITIES = [
+  { id: 'bengaluru', name: 'Bengaluru', label: 'Garden City & Tech Oasis' },
+  { id: 'goa', name: 'Goa', label: 'Beachfront Haven & Spa' },
+  { id: 'mumbai', name: 'Mumbai', label: 'Marine Drive Coastal Luxury' },
+  { id: 'delhi', name: 'Delhi', label: 'Lutyens Imperial Heritage' },
+  { id: 'jaipur', name: 'Jaipur', label: 'Royal Rajputana Haveli' },
+];
+
+export default function HeroSection({ hotelData, selectedCity, onSelectCity, guestName, onOpenConcierge }) {
+  const heroImage = hotelData?.hero_image || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80';
+  const hotelName = hotelData?.hotel_name || 'Oleria Bengaluru';
+  const city = hotelData?.city || 'Bengaluru';
+  const tagline = hotelData?.tagline || 'Exceptional stays. Intelligent hospitality.';
+  const addressStr = hotelData?.address ? `${hotelData.address.landmark || hotelData.address.street}, ${city}` : `${city}, India`;
+  const checkinTime = hotelData?.timings?.check_in || '3:00 PM';
+  const checkoutTime = hotelData?.timings?.check_out || '11:00 AM';
+
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-20 pb-16">
+    <section id="home" className="relative min-h-[95vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
       {/* Background Photography with Luxury Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center transition-all duration-700 transform scale-105"
-        style={{ backgroundImage: `url(${HOTEL_IMAGES.hero})` }}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/50" />
       </div>
 
       {/* Decorative ambient lighting */}
@@ -18,45 +33,64 @@ export default function HeroSection({ guestName, onOpenConcierge }) {
 
       {/* Hero Content */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center text-white z-10 flex flex-col items-center">
-        {/* Rating & Location Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wide uppercase mb-6 backdrop-blur-md">
+        {/* Rating & Brand Tag */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-semibold tracking-wide uppercase mb-4 backdrop-blur-md">
           <div className="flex text-amber-400">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-3 h-3 fill-amber-400" />
             ))}
           </div>
-          <span>Luxury Boutique Hotel • Bengaluru</span>
+          <span>5-Star Luxury Heritage & Concierge • {city}</span>
         </div>
 
+        {/* 5 City Switcher Bar in Hero */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6 max-w-3xl">
+          {CITIES.map((c) => {
+            const isActive = selectedCity === c.id;
+            return (
+              <button
+                key={c.id}
+                onClick={() => onSelectCity(c.id)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/30 scale-105'
+                    : 'bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-700/60'
+                }`}
+              >
+                <Building2 className={`w-3 h-3 ${isActive ? 'text-slate-950' : 'text-amber-400'}`} />
+                <span>{c.name}</span>
+              </button>
+            );
+          })}
+        </div>
 
         {/* Main Headline */}
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4 leading-tight">
-          Welcome to <br className="hidden sm:block" />
-          <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100 bg-clip-text text-transparent">
-            StayAI Grand Hotel Bengaluru
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-3 leading-tight">
+          <span className="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-100 bg-clip-text text-transparent">
+            {hotelName}
           </span>
         </h1>
 
-        {/* Subtitle with personalized guest greeting */}
-        <p className="text-base sm:text-xl text-slate-200 font-light max-w-2xl mb-3">
-          {guestName && guestName !== 'Guest' && guestName !== 'Valued Guest' ? (
-            <span>Welcome, <strong>{guestName}</strong>. Your stay, made effortless.</span>
-          ) : (
-            <span>Your stay, made effortless.</span>
-          )}
+        <p className="text-base sm:text-xl text-amber-200/90 font-light max-w-2xl mb-2">
+          {tagline}
         </p>
-        <p className="text-xs sm:text-sm text-slate-300 max-w-xl mb-10 leading-relaxed font-normal">
-          Experience world-class hospitality in the heart of MG Road with our 24/7 AI Guest Concierge for instant answers, dining reservations, and room availability.
+
+        {/* Guest Greeting */}
+        <p className="text-xs sm:text-sm text-slate-300 max-w-xl mb-8 leading-relaxed font-normal">
+          {guestName && guestName !== 'Guest' && guestName !== 'Valued Guest' ? (
+            <span>Welcome, <strong className="text-white font-semibold">{guestName}</strong>. </span>
+          ) : null}
+          Experience effortless intelligent hospitality with <strong>Oleria AI Concierge</strong> — ask questions, order in-room dining, or request room services directly by text.
         </p>
 
         {/* Primary Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full max-w-md mb-10">
           <button
             onClick={onOpenConcierge}
             className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-xl shadow-amber-950/40 hover:shadow-amber-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Ask AI Concierge</span>
+            <span>Ask Oleria Concierge</span>
           </button>
 
           <a
@@ -69,12 +103,12 @@ export default function HeroSection({ guestName, onOpenConcierge }) {
         </div>
 
         {/* Quick Facts Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl w-full bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl p-4 text-xs text-slate-300">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl w-full bg-slate-900/70 backdrop-blur-md border border-slate-800 rounded-2xl p-4 text-xs text-slate-300">
           <div className="flex items-center gap-2 p-2">
             <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
             <div className="text-left">
               <span className="block text-slate-400 text-[10px] uppercase tracking-wider">Location</span>
-              <span className="font-semibold text-white">MG Road, Bengaluru</span>
+              <span className="font-semibold text-white truncate max-w-[150px] block">{addressStr}</span>
             </div>
           </div>
 
@@ -82,23 +116,23 @@ export default function HeroSection({ guestName, onOpenConcierge }) {
             <Clock className="w-4 h-4 text-amber-400 shrink-0" />
             <div className="text-left">
               <span className="block text-slate-400 text-[10px] uppercase tracking-wider">Check-in / Out</span>
-              <span className="font-semibold text-white">3:00 PM / 11:00 AM</span>
+              <span className="font-semibold text-white">{checkinTime} / {checkoutTime}</span>
             </div>
           </div>
 
           <div className="flex items-center gap-2 p-2">
             <Waves className="w-4 h-4 text-amber-400 shrink-0" />
             <div className="text-left">
-              <span className="block text-slate-400 text-[10px] uppercase tracking-wider">Infinity Pool</span>
-              <span className="font-semibold text-white">15th-Fl Heated</span>
+              <span className="block text-slate-400 text-[10px] uppercase tracking-wider">Pool & Wellness</span>
+              <span className="font-semibold text-white">Heated Pool & Spa</span>
             </div>
           </div>
 
           <div className="flex items-center gap-2 p-2">
             <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
             <div className="text-left">
-              <span className="block text-slate-400 text-[10px] uppercase tracking-wider">AI Service</span>
-              <span className="font-semibold text-emerald-400">Live 24/7 Concierge</span>
+              <span className="block text-slate-400 text-[10px] uppercase tracking-wider">AI Concierge</span>
+              <span className="font-semibold text-emerald-400">24/7 Dedicated</span>
             </div>
           </div>
         </div>

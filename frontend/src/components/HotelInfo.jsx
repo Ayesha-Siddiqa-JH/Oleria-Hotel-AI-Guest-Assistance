@@ -10,7 +10,7 @@ export default function HotelInfo() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>5-Star Luxury Sanctuary</span>
         </div>
-        <h3 className="font-serif font-bold text-slate-900 text-lg">StayAI Grand Hotel Bengaluru</h3>
+        <h3 className="font-serif font-bold text-slate-900 text-lg">Oleria Bengaluru</h3>
         <p className="text-xs text-slate-500 flex items-center gap-1 mt-0.5">
           <MapPin className="w-3 h-3 text-slate-400 shrink-0" />
           <span>142 MG Road, Ashok Nagar, Bengaluru</span>

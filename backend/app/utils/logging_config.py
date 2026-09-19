@@ -9,7 +9,7 @@ def setup_logging():
             logging.StreamHandler(sys.stdout)
         ]
     )
-    logger = logging.getLogger("stayai")
+    logger = logging.getLogger("oleria")
     logger.setLevel(logging.INFO)
     return logger
 

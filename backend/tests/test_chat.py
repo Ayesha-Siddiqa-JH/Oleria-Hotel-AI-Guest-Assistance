@@ -6,7 +6,7 @@ def test_health_check(client):
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
-    assert "StayAI" in data["service"]
+    assert "Oleria" in data["service"]
 
 def test_get_hotel_info(client):
     response = client.get("/api/hotel")
@@ -14,7 +14,7 @@ def test_get_hotel_info(client):
     data = response.json()
     assert data["success"] is True
     assert "hotel_name" in data["hotel"]
-    assert "StayAI Grand Hotel Bengaluru" in data["hotel"]["hotel_name"]
+    assert "Oleria Bengaluru" in data["hotel"]["hotel_name"]
 
 def test_normal_question_checkin(client):
     """1. Normal guest question: What time is check-in?"""
@@ -101,7 +101,7 @@ def test_unsupported_out_of_domain_question(client):
     data = response.json()
     assert data["success"] is True
     # Asserts polite limitation or clarification
-    assert "stayai" in data["answer"].lower() or "hotel" in data["answer"].lower() or "clarify" in data["answer"].lower()
+    assert "oleria" in data["answer"].lower() or "hotel" in data["answer"].lower() or "clarify" in data["answer"].lower()
 
 def test_follow_up_conversation_context(client):
     """10. Follow-up question relying on prior turn: 'Do you have a pool?' -> 'What are the timings?'"""

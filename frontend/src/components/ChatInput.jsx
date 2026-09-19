@@ -48,7 +48,7 @@ export default function ChatInput({ onSendMessage, isLoading }) {
       </div>
       <div className="flex items-center justify-between text-[11px] text-slate-400 px-2 mt-1.5">
         <span>Press <kbd className="bg-slate-100 border border-slate-200 px-1 rounded text-[10px] font-mono text-slate-600">Enter ↵</kbd> to send</span>
-        <span>StayAI Concierge v1.0</span>
+        <span>Oleria AI Concierge</span>
       </div>
     </form>
   );

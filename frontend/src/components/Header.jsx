@@ -11,13 +11,13 @@ export default function Header({ onResetChat }) {
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <span className="font-serif text-xl font-bold tracking-tight text-slate-900">StayAI</span>
+              <span className="font-serif text-xl font-bold tracking-tight text-slate-900">Oleria Hotel</span>
               <span className="bg-amber-100 text-amber-900 text-[10px] font-semibold px-2 py-0.5 rounded-full border border-amber-200 uppercase tracking-wider">
                 Hotel Guest Assistant
               </span>
             </div>
             <p className="text-xs text-slate-500 font-medium hidden sm:block">
-              StayAI Grand Hotel Bengaluru • MG Road
+              Oleria Hotel Grand Hotel Bengaluru • MG Road
             </p>
           </div>
         </div>

@@ -34,10 +34,10 @@ export default function ChatWindow({
             </div>
             <div>
               <h3 className="font-serif font-bold text-slate-900 text-base mb-1">
-                Welcome to StayAI 👋
+                Welcome to Oleria Hotel 👋
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                I am your virtual concierge for <strong>StayAI Grand Hotel Bengaluru</strong>. Ask me anything about our luxury suites, infinity pool, breakfast timings, cancellation policies, or check live room availability!
+                I am your virtual concierge for <strong>Oleria Hotel</strong>. Ask me anything about our luxury suites, infinity pool, breakfast timings, cancellation policies, or check live room availability!
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function ChatWindow({
               <Sparkles className="w-3.5 h-3.5 animate-spin" />
             </div>
             <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-none px-4 py-2.5 shadow-xs flex items-center gap-1.5">
-              <span className="text-slate-600 font-medium text-xs">StayAI is typing</span>
+              <span className="text-slate-600 font-medium text-xs">Oleria Concierge is typing</span>
               <span className="flex space-x-1 ml-1">
                 <span className="w-1.5 h-1.5 bg-amber-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                 <span className="w-1.5 h-1.5 bg-amber-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>

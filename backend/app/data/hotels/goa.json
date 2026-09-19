@@ -1,0 +1,330 @@
+{
+  "hotel_id": "goa",
+  "hotel_name": "Oleria Goa Resort & Spa",
+  "city": "Goa",
+  "tagline": "Beachfront Haven & Coastal Tranquility in Candolim",
+  "star_rating": 5,
+  "hero_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80",
+  "address": {
+    "street": "Calangute-Candolim Main Road, Murrod Vaddo",
+    "city": "Goa",
+    "state": "Goa",
+    "postal_code": "403515",
+    "country": "India",
+    "landmark": "Direct private access to Candolim Beach"
+  },
+  "contact": {
+    "phone": "+91 832 249 8000",
+    "email": "concierge.goa@oleriahotels.com",
+    "website": "https://oleriahotels.com/goa",
+    "concierge_ext": "Ext 0 / 200"
+  },
+  "timings": {
+    "check_in": "2:00 PM",
+    "check_out": "11:00 AM",
+    "reception": "24/7 Beachside Concierge",
+    "early_check_in_policy": "Early check-in from 10:00 AM is subject to beach villa availability.",
+    "late_check_out_policy": "Late check-out up to 4:00 PM can be requested for INR 2,000 depending on resort occupancy."
+  },
+  "rooms": [
+    {
+      "room_type_id": "sea_view_cottage",
+      "name": "Sea View Luxury Cottage",
+      "capacity": 2,
+      "bed_type": "1 King Bed with Four-Poster Canopy",
+      "size_sqm": 45,
+      "view": "Arabian Sea & Coconut Grove View",
+      "price_per_night": 7200,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+      "description": "Charming Portuguese-inspired coastal cottage featuring an open-air rain shower, private sun deck with sea breezes, and handcrafted teak furniture.",
+      "amenities": [
+        "Direct Beach Boardwalk Access",
+        "Private Sun Deck with Loungers",
+        "Open-Air Tropical Rain Shower",
+        "Complimentary Beach Bag & Sunscreen Kit",
+        "High-Speed Wi-Fi (300 Mbps)",
+        "Mini Bar with Goan Craft Beers & Juices"
+      ]
+    },
+    {
+      "room_type_id": "azure_lagoon_suite",
+      "name": "Azure Lagoon Suite",
+      "capacity": 3,
+      "bed_type": "1 King Bed + 1 Plush Daybed",
+      "size_sqm": 68,
+      "view": "Resort Lagoon Pool & Sunset View",
+      "price_per_night": 10500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ground-level suite with direct swim-up lagoon pool access, outdoor jacuzzi whirlpool, and sunlit cabana patio.",
+      "amenities": [
+        "Direct Swim-Up Lagoon Pool Access",
+        "Private Outdoor Jacuzzi Hot Tub",
+        "Complimentary Sunset Sangria Carafe Daily",
+        "Espresso Machine & Gourmet Refreshments",
+        "Luxury Cotton Robes & Beach Towels"
+      ]
+    },
+    {
+      "room_type_id": "presidential_beach_villa",
+      "name": "Presidential Beachfront Villa",
+      "capacity": 4,
+      "bed_type": "2 King Bedrooms with En-suite Bathrooms",
+      "size_sqm": 120,
+      "view": "Direct Panoramic Oceanfront",
+      "price_per_night": 18500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "description": "Ultra-exclusive private beachfront villa featuring its own private plunge pool, outdoor BBQ pavilion, direct sand access, and personal butler.",
+      "amenities": [
+        "Private Plunge Pool & Garden Cabana",
+        "Dedicated 24/7 Island Butler",
+        "Private Beach Dining Setup upon request",
+        "Complimentary Airport Chauffeur from Dabolim / Mopa (GOI/GOX)",
+        "Complimentary Full Daily Buffet Breakfast"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "name": "Breeze Ocean Grill & Shack",
+      "cuisine": "Fresh Goan Seafood, Charcoal Grilled Catch of the Day & Portuguese Tapas",
+      "timings": "11:00 AM \u2013 11:30 PM",
+      "breakfast_timings": "7:00 AM \u2013 11:00 AM at The Palms Verandah",
+      "breakfast_inclusion": "Complimentary daily tropical breakfast buffet for all Villa and Lagoon Suite guests. For Cottage guests on room-only, it is INR 750 + taxes.",
+      "highlights": "Dine with your toes in the sand under swaying palm trees while listening to acoustic fado music."
+    },
+    {
+      "name": "The Palms Verandah",
+      "cuisine": "All-Day Global & Coastal Indian Comfort Food",
+      "timings": "7:00 AM \u2013 11:00 PM",
+      "highlights": "Al-fresco poolside terrace serving wood-fired flatbreads, fresh Goan curries, and tropical smoothie bowls."
+    }
+  ],
+  "menu": [
+    {
+      "id": "goa-bev-1",
+      "name": "Fresh Tender Coconut Water with Mint",
+      "category": "Beverages",
+      "price": 200,
+      "description": "Naturally chilled tender coconut opened fresh to order, served with fresh mint sprigs and lime wedge.",
+      "tags": [
+        "beverage",
+        "cold",
+        "light",
+        "healthy",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1544253102-127926ec037b?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-bev-2",
+      "name": "Kokum Cooler with Spiced Sea Salt",
+      "category": "Beverages",
+      "price": 220,
+      "description": "Traditional Goan wild kokum fruit infusion with roasted cumin, rock salt, and sparkling water.",
+      "tags": [
+        "beverage",
+        "cold",
+        "light",
+        "vegetarian",
+        "digestive"
+      ],
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-bev-3",
+      "name": "Artisan Goan Spiced Cappuccino",
+      "category": "Beverages",
+      "price": 260,
+      "description": "Velvety espresso steamed with whole milk and a whisper of cinnamon and cardamom.",
+      "tags": [
+        "beverage",
+        "coffee",
+        "hot",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-lt-1",
+      "name": "Coastal Lemon Coriander Soup",
+      "category": "Light Meals",
+      "price": 360,
+      "description": "Clear vegetable broth accented with fresh lemon juice, crushed garlic, and finely minced organic coriander stems.",
+      "tags": [
+        "light",
+        "soup",
+        "comfort",
+        "vegetarian",
+        "healthy"
+      ],
+      "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-lt-2",
+      "name": "Goan Yellow Moong Dal with Poee Bread",
+      "category": "Light Meals",
+      "price": 420,
+      "description": "Lightly tempered comforting yellow lentils with mustard seeds and curry leaves, served with warm Goan whole-wheat poee.",
+      "tags": [
+        "light",
+        "comfort",
+        "vegetarian",
+        "warm"
+      ],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-veg-1",
+      "name": "Goan Mushroom Caldin with Steamed Rice",
+      "category": "Vegetarian",
+      "price": 540,
+      "description": "Tender button mushrooms and bell peppers cooked in a fragrant mild coconut milk and turmeric Caldin curry.",
+      "tags": [
+        "vegetarian",
+        "main",
+        "goan"
+      ],
+      "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-veg-2",
+      "name": "Grilled Halloumi & Roasted Vegetable Wrap",
+      "category": "Vegetarian",
+      "price": 480,
+      "description": "Seared halloumi cheese with bell peppers, zucchini, and sun-dried tomato tapenade in a toasted tortilla.",
+      "tags": [
+        "vegetarian",
+        "wrap",
+        "snack"
+      ],
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-bf-1",
+      "name": "Tropical Acai & Mango Smoothie Bowl",
+      "category": "Breakfast",
+      "price": 440,
+      "description": "Chilled organic acai blended with Alphonso mango pulp, topped with chia seeds, toasted coconut flakes, and wild honey.",
+      "tags": [
+        "breakfast",
+        "light",
+        "healthy",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "goa-des-1",
+      "name": "Authentic Goan Bebinca with Coconut Cream",
+      "category": "Desserts",
+      "price": 340,
+      "description": "Traditional seven-layered warm Goan pudding baked with coconut milk, egg yolk, and nutmeg, served with vanilla ice cream.",
+      "tags": [
+        "desserts",
+        "sweet",
+        "goan"
+      ],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Lagoon Freeform Swimming Pool",
+      "details": "Massive 80-meter freeform freshwater pool meandering through tropical gardens with sunken cocktail bar.",
+      "timings": "7:00 AM \u2013 9:00 PM daily",
+      "cost": "Complimentary for resort guests.",
+      "icon": "pool"
+    },
+    {
+      "name": "Ayurveda & Ocean Breeze Spa",
+      "details": "Beachfront massage cabanas offering traditional Shirodhara, herbal poultice therapies, and reflexology.",
+      "timings": "9:00 AM \u2013 8:00 PM daily",
+      "cost": "Priced per spa menu",
+      "icon": "spa"
+    },
+    {
+      "name": "Private Beach Boardwalk & Cabanas",
+      "details": "Direct guarded access to pristine Candolim sand with private sun loungers, towel service, and beach attendants.",
+      "timings": "Open all day",
+      "cost": "Complimentary",
+      "icon": "beach"
+    },
+    {
+      "name": "Beach Volleyball & Water Sports Desk",
+      "details": "Complimentary paddleboards, beach volleyball court, and concierge booking for parasailing and dolphin cruises.",
+      "timings": "8:00 AM \u2013 6:00 PM",
+      "cost": "Paddleboards complimentary; motorized sports extra",
+      "icon": "sports"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "extra_pillows",
+      "name": "Extra Pillows",
+      "category": "Housekeeping",
+      "description": "Cooling gel or soft microfiber pillows delivered to your cottage.",
+      "delivery_time": "15 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "extra_towels",
+      "name": "Extra Beach & Bath Towels",
+      "category": "Housekeeping",
+      "description": "Set of large striped beach towels and fluffy bath towels.",
+      "delivery_time": "10-15 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "water_bottles",
+      "name": "Complimentary Water Bottles",
+      "category": "Housekeeping",
+      "description": "Fresh glass-bottled drinking water replenished directly in your room.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "housekeeping",
+      "name": "Full Housekeeping Refresh",
+      "category": "Housekeeping",
+      "description": "Full beach sand sweep, bed linen change, and bathroom replenish.",
+      "delivery_time": "30 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "airport_transfer",
+      "name": "Private Airport Chauffeur (Mopa or Dabolim)",
+      "category": "Concierge",
+      "description": "Comfortable Innova Crysta or SUV transfer to Goa International Airport.",
+      "delivery_time": "Reserve 3 hours in advance",
+      "cost": "INR 2,200 flat rate"
+    }
+  ],
+  "policies": {
+    "cancellation": "Free cancellation is permitted up to 48 hours prior to check-in. Cancellations within 48 hours forfeit one night deposit.",
+    "pets": "Pets are allowed in private Sea View Cottages upon request with an INR 2,500 sanitation fee.",
+    "smoking": "Rooms are non-smoking. Smoking is permitted on outdoor open sun decks and beach gardens.",
+    "children": "Kids under 6 stay free. Kids club and beach toys are provided complimentary.",
+    "id_requirements": "Valid government ID required at check-in for all adult guests."
+  },
+  "faqs": [
+    {
+      "question": "What time is check-in?",
+      "answer": "Check-in at Oleria Goa Resort & Spa is from 2:00 PM onwards, and check-out is at 11:00 AM."
+    },
+    {
+      "question": "Does the hotel have beach access?",
+      "answer": "Yes! Oleria Goa Resort & Spa has direct private boardwalk access straight onto Candolim Beach, complete with complimentary loungers and towel service."
+    },
+    {
+      "question": "Does the hotel have a swimming pool?",
+      "answer": "Yes, we feature an 80-meter tropical freeform lagoon pool with a sunken cocktail bar and direct swim-up rooms, open daily from 7:00 AM to 9:00 PM."
+    },
+    {
+      "question": "How far is the airport?",
+      "answer": "We are located approximately 55 minutes from Goa International Airport Dabolim (GOI) and 45 minutes from Manohar International Airport Mopa (GOX). Private chauffeur transfers can be booked for INR 2,200."
+    }
+  ]
+}

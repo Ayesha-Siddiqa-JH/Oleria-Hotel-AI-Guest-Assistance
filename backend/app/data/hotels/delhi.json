@@ -1,0 +1,281 @@
+{
+  "hotel_id": "delhi",
+  "hotel_name": "Oleria Delhi Heritage",
+  "city": "Delhi",
+  "tagline": "Imperial Splendor & Lutyens' Architectural Grandeur",
+  "star_rating": 5,
+  "hero_image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1920&q=80",
+  "address": {
+    "street": "24 Janpath, Connaught Place",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "postal_code": "110001",
+    "country": "India",
+    "landmark": "Near India Gate and Rashtrapati Bhavan"
+  },
+  "contact": {
+    "phone": "+91 11 4366 3000",
+    "email": "concierge.delhi@oleriahotels.com",
+    "website": "https://oleriahotels.com/delhi",
+    "concierge_ext": "Ext 0 / 400"
+  },
+  "timings": {
+    "check_in": "2:00 PM",
+    "check_out": "12:00 PM",
+    "reception": "24/7 Heritage Concierge",
+    "early_check_in_policy": "Early check-in from 9:00 AM is complimentary subject to room availability.",
+    "late_check_out_policy": "Late check-out up to 3:00 PM available for INR 1,500."
+  },
+  "rooms": [
+    {
+      "room_type_id": "heritage_classic_room",
+      "name": "Heritage Classic Room",
+      "capacity": 2,
+      "bed_type": "1 King Bed or 2 Twin Beds",
+      "size_sqm": 40,
+      "view": "Landscaped Mughal Courtyard View",
+      "price_per_night": 6200,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+      "description": "Colonial high-ceiling room featuring hand-woven Kashmiri carpets, Burma teak writing desk, and heritage brass fittings.",
+      "amenities": [
+        "Colonial 12-Foot Ceilings",
+        "Hand-Woven Kashmiri Silk Rugs",
+        "Heritage Italian Marble Bathroom",
+        "Air Purifier with HEPA Filter in Room",
+        "High-Speed Wi-Fi (500 Mbps)"
+      ]
+    },
+    {
+      "room_type_id": "viceroy_executive_suite",
+      "name": "Viceroy Executive Suite",
+      "capacity": 3,
+      "bed_type": "1 Grand King Bed + 1 Velvet Chaise",
+      "size_sqm": 62,
+      "view": "Janpath Boulevard & Lush Gardens",
+      "price_per_night": 9500,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Stately colonial suite with separate diplomatic drawing room, antique crystal chandeliers, and club lounge privileges.",
+      "amenities": [
+        "Viceroy Club Lounge Privileges",
+        "Private Diplomatic Drawing Room",
+        "Complimentary High Tea & Evening Single Malts",
+        "Nespresso Coffee Bar",
+        "Deep Clawfoot Soaking Bathtub"
+      ]
+    },
+    {
+      "room_type_id": "lutyens_presidential_suite",
+      "name": "Lutyens' Imperial Suite",
+      "capacity": 4,
+      "bed_type": "2 Master Bedrooms with En-suite Bathrooms",
+      "size_sqm": 105,
+      "view": "Panoramic India Gate & Lutyens' Gardens",
+      "price_per_night": 16000,
+      "currency": "INR",
+      "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80",
+      "description": "Unrivaled imperial suite hosting state guests, with banquet table for 8, bullet-resistant acoustic windows, and 24/7 personal butler.",
+      "amenities": [
+        "Dedicated 24/7 Personal Butler",
+        "Private Dining Salon for 8",
+        "Complimentary Airport Transfers (DEL IGI Airport)",
+        "Complimentary Royal Breakfast for 4",
+        "Private Library & Art Collection"
+      ]
+    }
+  ],
+  "dining": [
+    {
+      "name": "Haveli 1911",
+      "cuisine": "Royal Awadhi & Mughlai Cuisine, Dum Pukht Specialties",
+      "timings": "12:30 PM \u2013 3:30 PM, 7:00 PM \u2013 11:30 PM",
+      "breakfast_timings": "6:30 AM \u2013 10:30 AM at The Palm Court",
+      "breakfast_inclusion": "Complimentary breakfast buffet included with Viceroy Suite and Lutyens Suite. INR 850 + taxes for Heritage Classic Room.",
+      "highlights": "Authentic slow-cooked Dal Bukhara, fragrant saffron biryanis, and live sitar recitals."
+    },
+    {
+      "name": "The Palm Court Tea Salon",
+      "cuisine": "Traditional English High Tea, Scones & Artisanal Darjeeling First Flush",
+      "timings": "9:00 AM \u2013 9:00 PM",
+      "highlights": "Sunlit colonial glass atrium with live harpist and fresh clotted cream scones."
+    }
+  ],
+  "menu": [
+    {
+      "id": "del-bev-1",
+      "name": "First Flush Darjeeling Castleton Tea",
+      "category": "Beverages",
+      "price": 240,
+      "description": "Fragrant muscatel tea steeped in a bone china teapot with fresh mint and lemon slices.",
+      "tags": [
+        "beverage",
+        "tea",
+        "hot",
+        "light",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-bev-2",
+      "name": "Royal Kashmiri Kahwa",
+      "category": "Beverages",
+      "price": 250,
+      "description": "Green tea leaves brewed with saffron strands, whole cinnamon, green cardamom, and slivered almonds.",
+      "tags": [
+        "beverage",
+        "tea",
+        "hot",
+        "comfort",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-lt-1",
+      "name": "Murgh Yakhni Shorba / Subz Shorba",
+      "category": "Light Meals",
+      "price": 380,
+      "description": "Delicate, light clear broth slow-simmered with crushed ginger, whole peppercorns, and mint.",
+      "tags": [
+        "light",
+        "soup",
+        "comfort",
+        "healthy"
+      ],
+      "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-lt-2",
+      "name": "Steamed Moong Sprouts & Pomegranate Chaat",
+      "category": "Light Meals",
+      "price": 340,
+      "description": "Warm organic sprouted lentils tossed with fresh pomegranate pearls, mint chutney, and roasted cumin.",
+      "tags": [
+        "light",
+        "salad",
+        "healthy",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-veg-1",
+      "name": "Slow-Simmered Black Dal Makhani with Naan",
+      "category": "Vegetarian",
+      "price": 520,
+      "description": "Black lentils cooked overnight on slow charcoal fire with cultured butter, served with crisp butter naan.",
+      "tags": [
+        "vegetarian",
+        "main",
+        "north-indian"
+      ],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-bf-1",
+      "name": "Stuffed Amritsari Aloo Paratha with White Butter",
+      "category": "Breakfast",
+      "price": 380,
+      "description": "Crisp flaky whole wheat flatbread stuffed with spiced potatoes, served with homemade white butter and curd.",
+      "tags": [
+        "breakfast",
+        "north-indian",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "del-des-1",
+      "name": "Royal Shahi Tukda with Pistachio Rabdi",
+      "category": "Desserts",
+      "price": 330,
+      "description": "Ghee-fried bread soaked in aromatic saffron cardamom syrup, topped with thick condensed milk rabdi.",
+      "tags": [
+        "desserts",
+        "sweet",
+        "vegetarian"
+      ],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "amenities": [
+    {
+      "name": "Colonial Heated Pool & Sundeck",
+      "details": "Surrounded by landscaped Lutyens' gardens and Greek colonnades.",
+      "timings": "6:30 AM \u2013 9:30 PM",
+      "cost": "Complimentary",
+      "icon": "pool"
+    },
+    {
+      "name": "Mughal Garden Jogging Track",
+      "details": "Private 1-km track winding through manicured roses and fountains.",
+      "timings": "Open 24/7",
+      "cost": "Complimentary",
+      "icon": "park"
+    },
+    {
+      "name": "Soma Spa & Wellness Sanctuary",
+      "details": "Authentic Ayurvedic therapies, crystal steam rooms, and yoga pavilion.",
+      "timings": "8:00 AM \u2013 9:00 PM",
+      "cost": "Priced per menu",
+      "icon": "spa"
+    }
+  ],
+  "services": [
+    {
+      "service_id": "extra_pillows",
+      "name": "Extra Pillows",
+      "category": "Housekeeping",
+      "description": "Feather or orthopedic neck-support pillows.",
+      "delivery_time": "15 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "extra_towels",
+      "name": "Extra Towels",
+      "category": "Housekeeping",
+      "description": "Fresh plush bath and face towels.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "water_bottles",
+      "name": "Complimentary Water Bottles",
+      "category": "Housekeeping",
+      "description": "Spring water in sanitised glass bottles.",
+      "delivery_time": "10 mins",
+      "cost": "Complimentary"
+    },
+    {
+      "service_id": "airport_transfer",
+      "name": "Private Airport Chauffeur (IGI T3)",
+      "category": "Concierge",
+      "description": "Luxury Mercedes or Audi chauffeur transfer to Indira Gandhi International Airport.",
+      "delivery_time": "Reserve 2 hours in advance",
+      "cost": "INR 2,200 flat rate"
+    }
+  ],
+  "policies": {
+    "cancellation": "Free cancellation up to 24 hours prior to check-in.",
+    "pets": "Pets not permitted in heritage rooms.",
+    "smoking": "Smoke-free hotel. Designate outdoor garden pavilion available.",
+    "children": "Children under 6 stay free.",
+    "id_requirements": "Valid government ID required at check-in."
+  },
+  "faqs": [
+    {
+      "question": "What time is check-in?",
+      "answer": "Check-in at Oleria Delhi Heritage is from 2:00 PM onwards, and check-out is at 12:00 PM noon."
+    },
+    {
+      "question": "Where is the hotel situated?",
+      "answer": "Oleria Delhi Heritage is located at 24 Janpath, Connaught Place, right in the heart of diplomatic New Delhi near India Gate."
+    },
+    {
+      "question": "Does the hotel have a pool?",
+      "answer": "Yes, our outdoor colonnade-style heated pool is situated in the private Mughal gardens and is open from 6:30 AM to 9:30 PM."
+    }
+  ]
+}

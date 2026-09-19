@@ -1,20 +1,18 @@
 @echo off
-title StayAI - Hotel Guest Assistant
+title Oleria Hotel - AI-Powered Guest Experience & Concierge
 echo ========================================================
-echo   StayAI - AI-Powered Hotel Guest Assistant
+echo   OLERIA HOTEL - AI-Powered Guest Experience
 echo ========================================================
 echo.
 
 cd /d "%~dp0"
 
-echo [1/2] Checking backend environment...
-if not exist "backend\venv\Scripts\python.exe" (
-    echo Creating virtual environment...
-    python -m venv backend\venv
-    call backend\venv\Scripts\pip.exe install -r backend\requirements.txt
+echo Freeing port 8000 if occupied by previous instance...
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":8000" ^| findstr "LISTENING"') do (
+    echo Stopping old process PID %%a...
+    taskkill /f /pid %%a >nul 2>&1
 )
 
-echo [2/2] Starting unified server (Frontend + Backend)...
 echo.
 echo Application will be available at: http://127.0.0.1:8000
 echo API Docs will be available at:    http://127.0.0.1:8000/docs
@@ -23,5 +21,5 @@ echo Opening browser...
 start http://127.0.0.1:8000
 
 set PYTHONPATH=%~dp0backend
-backend\venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
+backend\venv\Scripts\python.exe -m uvicorn app.main:app --port 8000 --reload
 pause
