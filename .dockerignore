@@ -1,0 +1,7 @@
+node_modules
+.git
+.pytest_cache
+backend/venv
+__pycache__
+*.mp4
+*.png
