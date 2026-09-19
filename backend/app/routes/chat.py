@@ -552,7 +552,35 @@ async def chat_with_assistant(payload: ChatRequest):
         )
 
     # ==========================================
-    # WORKFLOW 5: GENERAL HOTEL INQUIRY (LLM OR GROUNDED FALLBACK)
+    # WORKFLOW 5: INSTANT FAST-PATH FOR FACTUAL PROPERTY FAQS
+    # ==========================================
+    # Provides instantaneous (< 10ms) responses for static verified facts:
+    # check-in/out, swimming pool, breakfast, cancellation, wifi, parking, and 3-guest rooms
+    is_direct_faq = any(kw in lower_msg for kw in [
+        "check-in", "check in", "checkin", "check-out", "check out", "checkout",
+        "pool", "swim", "breakfast", "buffet", "cancellation", "cancel", "refund",
+        "suitable for 3", "suitable for three", "room for 3", "room for three", "3 guests", "three guests",
+        "wifi", "wi-fi", "internet", "parking", "valet", "pet", "pets", "smoking", "smoke", "gym", "fitness", "spa"
+    ])
+    if is_direct_faq:
+        fast_answer = hotel_service.answer_by_knowledge_base(
+            query=message,
+            hotel_id=hotel_id,
+            history=history,
+            room_context=room_context
+        )
+        if fast_answer:
+            return ChatResponse(
+                success=True,
+                answer=fast_answer,
+                intent="hotel_information",
+                hotel_id=hotel_id,
+                hotel_name=hotel_name,
+                tool_used=False
+            )
+
+    # ==========================================
+    # WORKFLOW 6: GENERAL HOTEL INQUIRY (LLM OR GROUNDED FALLBACK)
     # ==========================================
     try:
         response_dict = llm_service.generate_response(
