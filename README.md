@@ -99,9 +99,9 @@ Watch the complete end-to-end guest journey, AI concierge dialogues, room dining
 
 ## 🚀 Live Demo & Links
 
-- **Live Demo Application**: [https://oleria-hotel.onrender.com](https://oleria-hotel.onrender.com) *(or run locally via `.\run.ps1`)*
+- **Live Demo Application**: [https://oleria-hotel-ai-guest-assistance.onrender.com](https://oleria-hotel-ai-guest-assistance.onrender.com)
 - **GitHub Repository**: [https://github.com/Ayesha-Siddiqa-JH/Oleria-Hotel-AI-Guest-Assistance](https://github.com/Ayesha-Siddiqa-JH/Oleria-Hotel-AI-Guest-Assistance)
-- **Hotel Operations Admin Portal**: Open `http://127.0.0.1:8000/admin` or click **"Admin Demo"** in the top navigation bar.
+- **Live Hotel Operations Admin Portal**: [https://oleria-hotel-ai-guest-assistance.onrender.com/admin](https://oleria-hotel-ai-guest-assistance.onrender.com/admin)
 
 ---
 
